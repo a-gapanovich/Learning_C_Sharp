@@ -1,0 +1,7 @@
+D:\Learning_C#\Start_learn\Start_learn\bin\Debug\Start_learn.exe.config
+D:\Learning_C#\Start_learn\Start_learn\bin\Debug\Start_learn.exe
+D:\Learning_C#\Start_learn\Start_learn\bin\Debug\Start_learn.pdb
+D:\Learning_C#\Start_learn\Start_learn\obj\Debug\Start_learn.csproj.AssemblyReference.cache
+D:\Learning_C#\Start_learn\Start_learn\obj\Debug\Start_learn.csproj.CoreCompileInputs.cache
+D:\Learning_C#\Start_learn\Start_learn\obj\Debug\Start_learn.exe
+D:\Learning_C#\Start_learn\Start_learn\obj\Debug\Start_learn.pdb
