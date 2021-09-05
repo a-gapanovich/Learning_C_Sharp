@@ -1,0 +1,17 @@
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.exe
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.deps.json
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.runtimeconfig.json
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.runtimeconfig.dev.json
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.dll
+D:\Learning_C#\Game_Snake\Game_Snake\bin\Debug\netcoreapp3.1\Game_Snake.pdb
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.csproj.AssemblyReference.cache
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.Form1.resources
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.Properties.Resources.resources
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.csproj.GenerateResource.cache
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.AssemblyInfoInputs.cache
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.AssemblyInfo.cs
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.csproj.CoreCompileInputs.cache
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.dll
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.pdb
+D:\Learning_C#\Game_Snake\Game_Snake\obj\Debug\netcoreapp3.1\Game_Snake.genruntimeconfig.cache
