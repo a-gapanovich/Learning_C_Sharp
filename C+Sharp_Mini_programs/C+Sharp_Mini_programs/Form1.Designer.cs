@@ -43,6 +43,10 @@ namespace C_Sharp_Mini_programs
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.btCopy = new System.Windows.Forms.Button();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.tbRand = new System.Windows.Forms.TextBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.lblOut = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -181,6 +185,10 @@ namespace C_Sharp_Mini_programs
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbRandom);
+            this.tabPage2.Controls.Add(this.btCopy);
+            this.tabPage2.Controls.Add(this.btnRandomClear);
+            this.tabPage2.Controls.Add(this.tbRand);
             this.tabPage2.Controls.Add(this.numericUpDown3);
             this.tabPage2.Controls.Add(this.lblOut);
             this.tabPage2.Controls.Add(this.label2);
@@ -195,6 +203,46 @@ namespace C_Sharp_Mini_programs
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Генератор";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(41, 165);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(144, 24);
+            this.cbRandom.TabIndex = 10;
+            this.cbRandom.Text = "Без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
+            // 
+            // btCopy
+            // 
+            this.btCopy.Location = new System.Drawing.Point(41, 246);
+            this.btCopy.Name = "btCopy";
+            this.btCopy.Size = new System.Drawing.Size(144, 29);
+            this.btCopy.TabIndex = 9;
+            this.btCopy.Text = "Копировать";
+            this.btCopy.UseVisualStyleBackColor = true;
+            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(41, 211);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(144, 29);
+            this.btnRandomClear.TabIndex = 8;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // tbRand
+            // 
+            this.tbRand.Location = new System.Drawing.Point(255, 211);
+            this.tbRand.Multiline = true;
+            this.tbRand.Name = "tbRand";
+            this.tbRand.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.tbRand.Size = new System.Drawing.Size(241, 64);
+            this.tbRand.TabIndex = 7;
+            this.tbRand.TextChanged += new System.EventHandler(this.tbRand_TextChanged);
             // 
             // numericUpDown3
             // 
@@ -211,11 +259,11 @@ namespace C_Sharp_Mini_programs
             // lblOut
             // 
             this.lblOut.AutoSize = true;
-            this.lblOut.Location = new System.Drawing.Point(306, 138);
+            this.lblOut.Location = new System.Drawing.Point(339, 127);
             this.lblOut.Name = "lblOut";
-            this.lblOut.Size = new System.Drawing.Size(50, 20);
+            this.lblOut.Size = new System.Drawing.Size(52, 20);
             this.lblOut.TabIndex = 5;
-            this.lblOut.Text = "label3";
+            this.lblOut.Text = "Число";
             this.lblOut.Click += new System.EventHandler(this.lblOut_Click);
             // 
             // label2
@@ -320,6 +368,10 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.Button bntRand;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem1;
+        private System.Windows.Forms.TextBox tbRand;
+        private System.Windows.Forms.Button btnRandomClear;
+        private System.Windows.Forms.Button btCopy;
+        private System.Windows.Forms.CheckBox cbRandom;
     }
 }
 

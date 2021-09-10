@@ -69,11 +69,33 @@ namespace C_Sharp_Mini_programs
             int n;
             n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown3.Value));
             lblOut.Text = Convert.ToString(n);
+            if (cbRandom.Checked)
+            {
+                if (tbRand.Text.IndexOf(n.ToString()) == -1) tbRand.AppendText(Convert.ToString(n) + " ");
+            }
+            else tbRand.AppendText(Convert.ToString(n) + " ");
+
+
         }
 
         private void lblOut_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbRand_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tbRand.Clear();
+        }
+
+        private void btCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbRand.Text);
         }
     }
 }
