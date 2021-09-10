@@ -13,10 +13,12 @@ namespace C_Sharp_Mini_programs
     public partial class Form1 : Form
     {
         int count = 0;
+        Random rnd;
        
         public Form1()
         {
             InitializeComponent();
+            rnd = new Random();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -50,6 +52,28 @@ namespace C_Sharp_Mini_programs
         {
             count = 0;
             lblCount.Text = Convert.ToString(count);
+        }
+
+        private void lblCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntRand_Click(object sender, EventArgs e)
+        {
+            int n;
+            n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown3.Value));
+            lblOut.Text = Convert.ToString(n);
+        }
+
+        private void lblOut_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
