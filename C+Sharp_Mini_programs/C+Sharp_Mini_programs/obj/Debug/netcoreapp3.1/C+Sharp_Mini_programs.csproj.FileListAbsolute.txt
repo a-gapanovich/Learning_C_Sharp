@@ -5,7 +5,6 @@ D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\bin\Debug\netcoreapp3
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\bin\Debug\netcoreapp3.1\C+Sharp_Mini_programs.dll
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\bin\Debug\netcoreapp3.1\C+Sharp_Mini_programs.pdb
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.csproj.AssemblyReference.cache
-D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C_Sharp_Mini_programs.Form1.resources
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.csproj.GenerateResource.cache
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.GeneratedMSBuildEditorConfig.editorconfig
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.AssemblyInfoInputs.cache
@@ -14,3 +13,4 @@ D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.dll
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.pdb
 D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C+Sharp_Mini_programs.genruntimeconfig.cache
+D:\Learning_C#\C+Sharp_Mini_programs\C+Sharp_Mini_programs\obj\Debug\netcoreapp3.1\C_Sharp_Mini_programs.My_Form.resources
