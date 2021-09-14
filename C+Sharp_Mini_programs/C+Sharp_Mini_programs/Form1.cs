@@ -14,13 +14,22 @@ namespace C_Sharp_Mini_programs
     {
         int count = 0;
         Random rnd;
-        char [] spec_chars = new char[] {'#', '%', '@', '~', '&' };
+        char[] spec_chars = new char[] { '#', '%', '@', '~', '&' };
         string password = "";
+        Dictionary<string, double> metrica;
 
         public My_Form()
         {
             InitializeComponent();
             rnd = new Random();
+            metrica = new Dictionary<string, double>();
+            metrica.Add("mm", 1);
+            metrica.Add("cm", 10);
+            metrica.Add("dm", 100);
+            metrica.Add("m", 1000);
+            metrica.Add("km", 1000 * 1000);
+            metrica.Add("mile", 1609344);
+
         }
 
         private void TSMI_Click(object sender, EventArgs e)
@@ -160,6 +169,19 @@ namespace C_Sharp_Mini_programs
         private void Copy_password_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(password);
+        }
+
+        private void TB_Converter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Convert_Click(object sender, EventArgs e)
+        {
+            double m1 = metrica[CB_From.Text];
+            double m2 = metrica[CB_To.Text];
+            double n = Convert.ToDouble(TB_From.Text);
+            TB_To.Text = Convert.ToString(n * m1 / m2);
         }
     }
 }

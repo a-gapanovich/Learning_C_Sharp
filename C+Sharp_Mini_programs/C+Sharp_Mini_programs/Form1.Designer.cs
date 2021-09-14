@@ -63,13 +63,19 @@ namespace C_Sharp_Mini_programs
             this.TB_Notepad = new System.Windows.Forms.TabPage();
             this.RTB_Notepad = new System.Windows.Forms.RichTextBox();
             this.TB_Pasword = new System.Windows.Forms.TabPage();
+            this.Copy_password = new System.Windows.Forms.Button();
             this.TD_Password = new System.Windows.Forms.TextBox();
             this.BTN_Password = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.NUD_Password = new System.Windows.Forms.NumericUpDown();
             this.CLB_Password = new System.Windows.Forms.CheckedListBox();
+            this.TB_Converter = new System.Windows.Forms.TabPage();
+            this.CB_To = new System.Windows.Forms.ComboBox();
+            this.CB_From = new System.Windows.Forms.ComboBox();
+            this.TB_To = new System.Windows.Forms.TextBox();
+            this.TB_From = new System.Windows.Forms.TextBox();
+            this.BTN_Convert = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Copy_password = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Notepad.SuspendLayout();
@@ -80,6 +86,7 @@ namespace C_Sharp_Mini_programs
             this.TB_Notepad.SuspendLayout();
             this.TB_Pasword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Password)).BeginInit();
+            this.TB_Converter.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -197,6 +204,7 @@ namespace C_Sharp_Mini_programs
             this.Notepad.Controls.Add(this.TB_Generator);
             this.Notepad.Controls.Add(this.TB_Notepad);
             this.Notepad.Controls.Add(this.TB_Pasword);
+            this.Notepad.Controls.Add(this.TB_Converter);
             this.Notepad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Notepad.Location = new System.Drawing.Point(0, 28);
             this.Notepad.Name = "Notepad";
@@ -421,6 +429,16 @@ namespace C_Sharp_Mini_programs
             this.TB_Pasword.Text = "Пароли";
             this.TB_Pasword.UseVisualStyleBackColor = true;
             // 
+            // Copy_password
+            // 
+            this.Copy_password.Location = new System.Drawing.Point(53, 337);
+            this.Copy_password.Name = "Copy_password";
+            this.Copy_password.Size = new System.Drawing.Size(320, 43);
+            this.Copy_password.TabIndex = 6;
+            this.Copy_password.Text = "Копировать";
+            this.Copy_password.UseVisualStyleBackColor = true;
+            this.Copy_password.Click += new System.EventHandler(this.Copy_password_Click);
+            // 
             // TD_Password
             // 
             this.TD_Password.Location = new System.Drawing.Point(53, 260);
@@ -486,21 +504,88 @@ namespace C_Sharp_Mini_programs
             this.CLB_Password.Size = new System.Drawing.Size(320, 92);
             this.CLB_Password.TabIndex = 1;
             // 
+            // TB_Converter
+            // 
+            this.TB_Converter.Controls.Add(this.CB_To);
+            this.TB_Converter.Controls.Add(this.CB_From);
+            this.TB_Converter.Controls.Add(this.TB_To);
+            this.TB_Converter.Controls.Add(this.TB_From);
+            this.TB_Converter.Controls.Add(this.BTN_Convert);
+            this.TB_Converter.Location = new System.Drawing.Point(4, 29);
+            this.TB_Converter.Name = "TB_Converter";
+            this.TB_Converter.Size = new System.Drawing.Size(435, 388);
+            this.TB_Converter.TabIndex = 4;
+            this.TB_Converter.Text = "Конвертер";
+            this.TB_Converter.UseVisualStyleBackColor = true;
+            this.TB_Converter.Click += new System.EventHandler(this.TB_Converter_Click);
+            // 
+            // CB_To
+            // 
+            this.CB_To.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CB_To.FormattingEnabled = true;
+            this.CB_To.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.CB_To.Location = new System.Drawing.Point(241, 60);
+            this.CB_To.Name = "CB_To";
+            this.CB_To.Size = new System.Drawing.Size(151, 36);
+            this.CB_To.TabIndex = 8;
+            this.CB_To.Text = "mm";
+            // 
+            // CB_From
+            // 
+            this.CB_From.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CB_From.FormattingEnabled = true;
+            this.CB_From.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.CB_From.Location = new System.Drawing.Point(25, 60);
+            this.CB_From.Name = "CB_From";
+            this.CB_From.Size = new System.Drawing.Size(151, 36);
+            this.CB_From.TabIndex = 7;
+            this.CB_From.Text = "mm";
+            // 
+            // TB_To
+            // 
+            this.TB_To.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TB_To.Location = new System.Drawing.Point(241, 126);
+            this.TB_To.Name = "TB_To";
+            this.TB_To.ReadOnly = true;
+            this.TB_To.Size = new System.Drawing.Size(151, 34);
+            this.TB_To.TabIndex = 6;
+            // 
+            // TB_From
+            // 
+            this.TB_From.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TB_From.Location = new System.Drawing.Point(25, 126);
+            this.TB_From.Name = "TB_From";
+            this.TB_From.Size = new System.Drawing.Size(151, 34);
+            this.TB_From.TabIndex = 5;
+            this.TB_From.Text = "1";
+            // 
+            // BTN_Convert
+            // 
+            this.BTN_Convert.Location = new System.Drawing.Point(113, 188);
+            this.BTN_Convert.Name = "BTN_Convert";
+            this.BTN_Convert.Size = new System.Drawing.Size(188, 42);
+            this.BTN_Convert.TabIndex = 4;
+            this.BTN_Convert.Text = "Конвертировать";
+            this.BTN_Convert.UseVisualStyleBackColor = true;
+            this.BTN_Convert.Click += new System.EventHandler(this.BTN_Convert_Click);
+            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // Copy_password
-            // 
-            this.Copy_password.Location = new System.Drawing.Point(53, 337);
-            this.Copy_password.Name = "Copy_password";
-            this.Copy_password.Size = new System.Drawing.Size(320, 43);
-            this.Copy_password.TabIndex = 6;
-            this.Copy_password.Text = "Копировать";
-            this.Copy_password.UseVisualStyleBackColor = true;
-            this.Copy_password.Click += new System.EventHandler(this.Copy_password_Click);
             // 
             // My_Form
             // 
@@ -527,6 +612,8 @@ namespace C_Sharp_Mini_programs
             this.TB_Pasword.ResumeLayout(false);
             this.TB_Pasword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Password)).EndInit();
+            this.TB_Converter.ResumeLayout(false);
+            this.TB_Converter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,6 +661,12 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.TextBox TD_Password;
         private System.Windows.Forms.Button Copy_password;
+        private System.Windows.Forms.TabPage TB_Converter;
+        private System.Windows.Forms.Button BTN_Convert;
+        private System.Windows.Forms.ComboBox CB_To;
+        private System.Windows.Forms.ComboBox CB_From;
+        private System.Windows.Forms.TextBox TB_To;
+        private System.Windows.Forms.TextBox TB_From;
     }
 }
 
