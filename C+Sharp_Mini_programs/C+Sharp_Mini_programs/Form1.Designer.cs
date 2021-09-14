@@ -35,15 +35,22 @@ namespace C_Sharp_Mini_programs
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TSMI_file = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_file_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_Notepad = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_Time = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_Data = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_help = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_helt_about = new System.Windows.Forms.ToolStripMenuItem();
-            this.Counter = new System.Windows.Forms.TabControl();
+            this.Notepad = new System.Windows.Forms.TabControl();
             this.TP_Counter = new System.Windows.Forms.TabPage();
             this.LB_counter = new System.Windows.Forms.Label();
             this.BTN_reset = new System.Windows.Forms.Button();
             this.BTN_mimus = new System.Windows.Forms.Button();
             this.BTN_plus = new System.Windows.Forms.Button();
             this.TB_Generator = new System.Windows.Forms.TabPage();
+            this.CB_Rand = new System.Windows.Forms.CheckBox();
             this.BT_RandCopy = new System.Windows.Forms.Button();
             this.BT_Rand_clear = new System.Windows.Forms.Button();
             this.TB_Random = new System.Windows.Forms.TextBox();
@@ -53,14 +60,16 @@ namespace C_Sharp_Mini_programs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_Generate = new System.Windows.Forms.Button();
-            this.CB_Rand = new System.Windows.Forms.CheckBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.RTB_Notepad = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.Counter.SuspendLayout();
+            this.Notepad.SuspendLayout();
             this.TP_Counter.SuspendLayout();
             this.TB_Generator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -82,12 +91,14 @@ namespace C_Sharp_Mini_programs
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMI_file,
+            this.TSMI_Notepad,
             this.TSMI_help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(535, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // TSMI_file
             // 
@@ -104,6 +115,55 @@ namespace C_Sharp_Mini_programs
             this.TSMI_file_exit.Text = "Выход";
             this.TSMI_file_exit.Click += new System.EventHandler(this.TSMI_Click);
             // 
+            // TSMI_Notepad
+            // 
+            this.TSMI_Notepad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMI_Time,
+            this.TSMI_Data,
+            this.toolStripMenuItem1,
+            this.cToolStripMenuItem,
+            this.cToolStripMenuItem1});
+            this.TSMI_Notepad.Name = "TSMI_Notepad";
+            this.TSMI_Notepad.Size = new System.Drawing.Size(80, 24);
+            this.TSMI_Notepad.Text = "Блокнот";
+            // 
+            // TSMI_Time
+            // 
+            this.TSMI_Time.Name = "TSMI_Time";
+            this.TSMI_Time.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.TSMI_Time.Size = new System.Drawing.Size(299, 26);
+            this.TSMI_Time.Text = "Вставить время";
+            this.TSMI_Time.Click += new System.EventHandler(this.TSMI_Time_Click);
+            // 
+            // TSMI_Data
+            // 
+            this.TSMI_Data.Name = "TSMI_Data";
+            this.TSMI_Data.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.TSMI_Data.Size = new System.Drawing.Size(299, 26);
+            this.TSMI_Data.Text = "Вставить дату";
+            this.TSMI_Data.Click += new System.EventHandler(this.TSMI_Data_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(296, 6);
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.cToolStripMenuItem.Text = "Сохранить";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
+            // 
+            // cToolStripMenuItem1
+            // 
+            this.cToolStripMenuItem1.Name = "cToolStripMenuItem1";
+            this.cToolStripMenuItem1.Size = new System.Drawing.Size(299, 26);
+            this.cToolStripMenuItem1.Text = "Загрузить";
+            this.cToolStripMenuItem1.Click += new System.EventHandler(this.cToolStripMenuItem1_Click);
+            // 
             // TSMI_help
             // 
             this.TSMI_help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -119,16 +179,17 @@ namespace C_Sharp_Mini_programs
             this.TSMI_helt_about.Text = "О программе";
             this.TSMI_helt_about.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
-            // Counter
+            // Notepad
             // 
-            this.Counter.Controls.Add(this.TP_Counter);
-            this.Counter.Controls.Add(this.TB_Generator);
-            this.Counter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Counter.Location = new System.Drawing.Point(0, 28);
-            this.Counter.Name = "Counter";
-            this.Counter.SelectedIndex = 0;
-            this.Counter.Size = new System.Drawing.Size(535, 422);
-            this.Counter.TabIndex = 2;
+            this.Notepad.Controls.Add(this.TP_Counter);
+            this.Notepad.Controls.Add(this.TB_Generator);
+            this.Notepad.Controls.Add(this.tabPage1);
+            this.Notepad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Notepad.Location = new System.Drawing.Point(0, 28);
+            this.Notepad.Name = "Notepad";
+            this.Notepad.SelectedIndex = 0;
+            this.Notepad.Size = new System.Drawing.Size(535, 421);
+            this.Notepad.TabIndex = 2;
             // 
             // TP_Counter
             // 
@@ -139,7 +200,7 @@ namespace C_Sharp_Mini_programs
             this.TP_Counter.Location = new System.Drawing.Point(4, 29);
             this.TP_Counter.Name = "TP_Counter";
             this.TP_Counter.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Counter.Size = new System.Drawing.Size(527, 389);
+            this.TP_Counter.Size = new System.Drawing.Size(527, 388);
             this.TP_Counter.TabIndex = 0;
             this.TP_Counter.Text = "Счетчик";
             this.TP_Counter.UseVisualStyleBackColor = true;
@@ -202,14 +263,24 @@ namespace C_Sharp_Mini_programs
             this.TB_Generator.Location = new System.Drawing.Point(4, 29);
             this.TB_Generator.Name = "TB_Generator";
             this.TB_Generator.Padding = new System.Windows.Forms.Padding(3);
-            this.TB_Generator.Size = new System.Drawing.Size(527, 389);
+            this.TB_Generator.Size = new System.Drawing.Size(527, 388);
             this.TB_Generator.TabIndex = 1;
             this.TB_Generator.Text = "Генератор";
             this.TB_Generator.UseVisualStyleBackColor = true;
             // 
+            // CB_Rand
+            // 
+            this.CB_Rand.AutoSize = true;
+            this.CB_Rand.Location = new System.Drawing.Point(332, 172);
+            this.CB_Rand.Name = "CB_Rand";
+            this.CB_Rand.Size = new System.Drawing.Size(144, 24);
+            this.CB_Rand.TabIndex = 9;
+            this.CB_Rand.Text = "Без повторений";
+            this.CB_Rand.UseVisualStyleBackColor = true;
+            // 
             // BT_RandCopy
             // 
-            this.BT_RandCopy.Location = new System.Drawing.Point(33, 214);
+            this.BT_RandCopy.Location = new System.Drawing.Point(39, 255);
             this.BT_RandCopy.Name = "BT_RandCopy";
             this.BT_RandCopy.Size = new System.Drawing.Size(119, 36);
             this.BT_RandCopy.TabIndex = 8;
@@ -219,7 +290,7 @@ namespace C_Sharp_Mini_programs
             // 
             // BT_Rand_clear
             // 
-            this.BT_Rand_clear.Location = new System.Drawing.Point(33, 172);
+            this.BT_Rand_clear.Location = new System.Drawing.Point(39, 213);
             this.BT_Rand_clear.Name = "BT_Rand_clear";
             this.BT_Rand_clear.Size = new System.Drawing.Size(119, 36);
             this.BT_Rand_clear.TabIndex = 7;
@@ -229,7 +300,7 @@ namespace C_Sharp_Mini_programs
             // 
             // TB_Random
             // 
-            this.TB_Random.Location = new System.Drawing.Point(302, 172);
+            this.TB_Random.Location = new System.Drawing.Point(308, 213);
             this.TB_Random.Multiline = true;
             this.TB_Random.Name = "TB_Random";
             this.TB_Random.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -239,7 +310,7 @@ namespace C_Sharp_Mini_programs
             // NUD_down
             // 
             this.NUD_down.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NUD_down.Location = new System.Drawing.Point(64, 26);
+            this.NUD_down.Location = new System.Drawing.Point(70, 67);
             this.NUD_down.Minimum = new decimal(new int[] {
             100,
             0,
@@ -252,7 +323,7 @@ namespace C_Sharp_Mini_programs
             // NUD_up
             // 
             this.NUD_up.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NUD_up.Location = new System.Drawing.Point(64, 88);
+            this.NUD_up.Location = new System.Drawing.Point(70, 129);
             this.NUD_up.Minimum = new decimal(new int[] {
             100,
             0,
@@ -266,7 +337,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.LB_genWrite.AutoSize = true;
             this.LB_genWrite.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LB_genWrite.Location = new System.Drawing.Point(212, 58);
+            this.LB_genWrite.Location = new System.Drawing.Point(218, 99);
             this.LB_genWrite.Name = "LB_genWrite";
             this.LB_genWrite.Size = new System.Drawing.Size(69, 27);
             this.LB_genWrite.TabIndex = 3;
@@ -276,7 +347,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(8, 90);
+            this.label2.Location = new System.Drawing.Point(14, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 27);
             this.label2.TabIndex = 2;
@@ -286,7 +357,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(8, 28);
+            this.label1.Location = new System.Drawing.Point(14, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 27);
             this.label1.TabIndex = 1;
@@ -295,7 +366,7 @@ namespace C_Sharp_Mini_programs
             // BTN_Generate
             // 
             this.BTN_Generate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BTN_Generate.Location = new System.Drawing.Point(302, 49);
+            this.BTN_Generate.Location = new System.Drawing.Point(308, 90);
             this.BTN_Generate.Name = "BTN_Generate";
             this.BTN_Generate.Size = new System.Drawing.Size(186, 45);
             this.BTN_Generate.TabIndex = 0;
@@ -303,36 +374,47 @@ namespace C_Sharp_Mini_programs
             this.BTN_Generate.UseVisualStyleBackColor = true;
             this.BTN_Generate.Click += new System.EventHandler(this.BTN_Generate_Click);
             // 
-            // CB_Rand
+            // tabPage1
             // 
-            this.CB_Rand.AutoSize = true;
-            this.CB_Rand.Location = new System.Drawing.Point(33, 271);
-            this.CB_Rand.Name = "CB_Rand";
-            this.CB_Rand.Size = new System.Drawing.Size(144, 24);
-            this.CB_Rand.TabIndex = 9;
-            this.CB_Rand.Text = "Без повторений";
-            this.CB_Rand.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.RTB_Notepad);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(527, 388);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Блокнот";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // RTB_Notepad
+            // 
+            this.RTB_Notepad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTB_Notepad.Location = new System.Drawing.Point(0, 0);
+            this.RTB_Notepad.Name = "RTB_Notepad";
+            this.RTB_Notepad.Size = new System.Drawing.Size(527, 388);
+            this.RTB_Notepad.TabIndex = 0;
+            this.RTB_Notepad.Text = "";
             // 
             // My_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 450);
-            this.Controls.Add(this.Counter);
+            this.ClientSize = new System.Drawing.Size(535, 449);
+            this.Controls.Add(this.Notepad);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "My_Form";
             this.Text = "Утилиты";
+            this.Load += new System.EventHandler(this.My_Form_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.Counter.ResumeLayout(false);
+            this.Notepad.ResumeLayout(false);
             this.TP_Counter.ResumeLayout(false);
             this.TP_Counter.PerformLayout();
             this.TB_Generator.ResumeLayout(false);
             this.TB_Generator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +429,7 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.ToolStripMenuItem TSMI_file_exit;
         private System.Windows.Forms.ToolStripMenuItem TSMI_help;
         private System.Windows.Forms.ToolStripMenuItem TSMI_helt_about;
-        private System.Windows.Forms.TabControl Counter;
+        private System.Windows.Forms.TabControl Notepad;
         private System.Windows.Forms.TabPage TP_Counter;
         private System.Windows.Forms.Label LB_counter;
         private System.Windows.Forms.Button BTN_reset;
@@ -364,6 +446,14 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.Button BT_Rand_clear;
         private System.Windows.Forms.Button BT_RandCopy;
         private System.Windows.Forms.CheckBox CB_Rand;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.RichTextBox RTB_Notepad;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Notepad;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Time;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Data;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem1;
     }
 }
 

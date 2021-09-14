@@ -28,7 +28,7 @@ namespace C_Sharp_Mini_programs
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Тестовое приложение, в котором пытаюсь понять идею работы с Window Forms и C# \nАвтор: Александр Гапанович, сентябрь 2021 г.","О программе");
+            MessageBox.Show("Тестовое приложение, в котором пытаюсь понять идею работы с Window Forms и C# \nАвтор: Александр Гапанович, сентябрь 2021 г.", "О программе");
         }
 
         private void BTN_plus_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace C_Sharp_Mini_programs
 
         private void BTN_Generate_Click(object sender, EventArgs e)
         {
-            int n = rnd.Next(Convert.ToInt32(NUD_down.Value), Convert.ToInt32(NUD_up.Value))+1;
+            int n = rnd.Next(Convert.ToInt32(NUD_down.Value), Convert.ToInt32(NUD_up.Value)) + 1;
             LB_genWrite.Text = Convert.ToString(n);
             if (CB_Rand.Checked == true)
             {
@@ -72,6 +72,53 @@ namespace C_Sharp_Mini_programs
         {
             Clipboard.SetText(TB_Random.Text);
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void TSMI_Data_Click(object sender, EventArgs e)
+        {
+            RTB_Notepad.AppendText(DateTime.Now.ToShortDateString() + "\n");
+        }
+
+        private void TSMI_Time_Click(object sender, EventArgs e)
+        {
+            RTB_Notepad.AppendText(DateTime.Now.ToShortTimeString() + "\n");
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RTB_Notepad.SaveFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при сохранении!");
+            }
+        }
+        void LoadNotepad()
+        {
+            try
+            {
+                RTB_Notepad.LoadFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при загрузке!");
+            }
+        }
+        private void cToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LoadNotepad();
+        }
+
+        private void My_Form_Load(object sender, EventArgs e)
+        {
+            LoadNotepad();
         }
     }
 }
