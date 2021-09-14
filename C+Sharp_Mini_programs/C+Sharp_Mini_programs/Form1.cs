@@ -53,6 +53,25 @@ namespace C_Sharp_Mini_programs
         {
             int n = rnd.Next(Convert.ToInt32(NUD_down.Value), Convert.ToInt32(NUD_up.Value))+1;
             LB_genWrite.Text = Convert.ToString(n);
+            if (CB_Rand.Checked == true)
+            {
+                if (TB_Random.Text.IndexOf(n.ToString()) == -1) TB_Random.AppendText(n + " \n");
+            }
+            else
+            {
+                TB_Random.AppendText(n + " \n");
+            }
+        }
+
+        private void BT_Rand_clear_Click(object sender, EventArgs e)
+        {
+            TB_Random.Clear();
+        }
+
+        private void BT_RandCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(TB_Random.Text);
+
         }
     }
 }

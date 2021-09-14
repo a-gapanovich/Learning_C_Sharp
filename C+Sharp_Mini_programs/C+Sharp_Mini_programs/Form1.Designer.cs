@@ -44,12 +44,16 @@ namespace C_Sharp_Mini_programs
             this.BTN_mimus = new System.Windows.Forms.Button();
             this.BTN_plus = new System.Windows.Forms.Button();
             this.TB_Generator = new System.Windows.Forms.TabPage();
+            this.BT_RandCopy = new System.Windows.Forms.Button();
+            this.BT_Rand_clear = new System.Windows.Forms.Button();
+            this.TB_Random = new System.Windows.Forms.TextBox();
             this.NUD_down = new System.Windows.Forms.NumericUpDown();
             this.NUD_up = new System.Windows.Forms.NumericUpDown();
             this.LB_genWrite = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_Generate = new System.Windows.Forms.Button();
+            this.CB_Rand = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Counter.SuspendLayout();
@@ -185,6 +189,10 @@ namespace C_Sharp_Mini_programs
             // 
             // TB_Generator
             // 
+            this.TB_Generator.Controls.Add(this.CB_Rand);
+            this.TB_Generator.Controls.Add(this.BT_RandCopy);
+            this.TB_Generator.Controls.Add(this.BT_Rand_clear);
+            this.TB_Generator.Controls.Add(this.TB_Random);
             this.TB_Generator.Controls.Add(this.NUD_down);
             this.TB_Generator.Controls.Add(this.NUD_up);
             this.TB_Generator.Controls.Add(this.LB_genWrite);
@@ -198,6 +206,35 @@ namespace C_Sharp_Mini_programs
             this.TB_Generator.TabIndex = 1;
             this.TB_Generator.Text = "Генератор";
             this.TB_Generator.UseVisualStyleBackColor = true;
+            // 
+            // BT_RandCopy
+            // 
+            this.BT_RandCopy.Location = new System.Drawing.Point(33, 214);
+            this.BT_RandCopy.Name = "BT_RandCopy";
+            this.BT_RandCopy.Size = new System.Drawing.Size(119, 36);
+            this.BT_RandCopy.TabIndex = 8;
+            this.BT_RandCopy.Text = "Копировать";
+            this.BT_RandCopy.UseVisualStyleBackColor = true;
+            this.BT_RandCopy.Click += new System.EventHandler(this.BT_RandCopy_Click);
+            // 
+            // BT_Rand_clear
+            // 
+            this.BT_Rand_clear.Location = new System.Drawing.Point(33, 172);
+            this.BT_Rand_clear.Name = "BT_Rand_clear";
+            this.BT_Rand_clear.Size = new System.Drawing.Size(119, 36);
+            this.BT_Rand_clear.TabIndex = 7;
+            this.BT_Rand_clear.Text = "Очистить";
+            this.BT_Rand_clear.UseVisualStyleBackColor = true;
+            this.BT_Rand_clear.Click += new System.EventHandler(this.BT_Rand_clear_Click);
+            // 
+            // TB_Random
+            // 
+            this.TB_Random.Location = new System.Drawing.Point(302, 172);
+            this.TB_Random.Multiline = true;
+            this.TB_Random.Name = "TB_Random";
+            this.TB_Random.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TB_Random.Size = new System.Drawing.Size(199, 78);
+            this.TB_Random.TabIndex = 6;
             // 
             // NUD_down
             // 
@@ -266,6 +303,16 @@ namespace C_Sharp_Mini_programs
             this.BTN_Generate.UseVisualStyleBackColor = true;
             this.BTN_Generate.Click += new System.EventHandler(this.BTN_Generate_Click);
             // 
+            // CB_Rand
+            // 
+            this.CB_Rand.AutoSize = true;
+            this.CB_Rand.Location = new System.Drawing.Point(33, 271);
+            this.CB_Rand.Name = "CB_Rand";
+            this.CB_Rand.Size = new System.Drawing.Size(144, 24);
+            this.CB_Rand.TabIndex = 9;
+            this.CB_Rand.Text = "Без повторений";
+            this.CB_Rand.UseVisualStyleBackColor = true;
+            // 
             // My_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -313,6 +360,10 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTN_Generate;
+        private System.Windows.Forms.TextBox TB_Random;
+        private System.Windows.Forms.Button BT_Rand_clear;
+        private System.Windows.Forms.Button BT_RandCopy;
+        private System.Windows.Forms.CheckBox CB_Rand;
     }
 }
 
