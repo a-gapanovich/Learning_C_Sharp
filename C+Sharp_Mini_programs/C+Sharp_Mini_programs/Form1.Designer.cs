@@ -60,8 +60,16 @@ namespace C_Sharp_Mini_programs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_Generate = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TB_Notepad = new System.Windows.Forms.TabPage();
             this.RTB_Notepad = new System.Windows.Forms.RichTextBox();
+            this.TB_Pasword = new System.Windows.Forms.TabPage();
+            this.TD_Password = new System.Windows.Forms.TextBox();
+            this.BTN_Password = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NUD_Password = new System.Windows.Forms.NumericUpDown();
+            this.CLB_Password = new System.Windows.Forms.CheckedListBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Copy_password = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Notepad.SuspendLayout();
@@ -69,7 +77,9 @@ namespace C_Sharp_Mini_programs
             this.TB_Generator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.TB_Notepad.SuspendLayout();
+            this.TB_Pasword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Password)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -95,7 +105,7 @@ namespace C_Sharp_Mini_programs
             this.TSMI_help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(535, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(443, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -153,6 +163,8 @@ namespace C_Sharp_Mini_programs
             // cToolStripMenuItem
             // 
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
             this.cToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
             this.cToolStripMenuItem.Text = "Сохранить";
             this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
@@ -183,12 +195,13 @@ namespace C_Sharp_Mini_programs
             // 
             this.Notepad.Controls.Add(this.TP_Counter);
             this.Notepad.Controls.Add(this.TB_Generator);
-            this.Notepad.Controls.Add(this.tabPage1);
+            this.Notepad.Controls.Add(this.TB_Notepad);
+            this.Notepad.Controls.Add(this.TB_Pasword);
             this.Notepad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Notepad.Location = new System.Drawing.Point(0, 28);
             this.Notepad.Name = "Notepad";
             this.Notepad.SelectedIndex = 0;
-            this.Notepad.Size = new System.Drawing.Size(535, 421);
+            this.Notepad.Size = new System.Drawing.Size(443, 421);
             this.Notepad.TabIndex = 2;
             // 
             // TP_Counter
@@ -200,7 +213,7 @@ namespace C_Sharp_Mini_programs
             this.TP_Counter.Location = new System.Drawing.Point(4, 29);
             this.TP_Counter.Name = "TP_Counter";
             this.TP_Counter.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Counter.Size = new System.Drawing.Size(527, 388);
+            this.TP_Counter.Size = new System.Drawing.Size(435, 388);
             this.TP_Counter.TabIndex = 0;
             this.TP_Counter.Text = "Счетчик";
             this.TP_Counter.UseVisualStyleBackColor = true;
@@ -209,7 +222,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.LB_counter.AutoSize = true;
             this.LB_counter.Font = new System.Drawing.Font("Segoe UI Historic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LB_counter.Location = new System.Drawing.Point(184, 159);
+            this.LB_counter.Location = new System.Drawing.Point(92, 154);
             this.LB_counter.Name = "LB_counter";
             this.LB_counter.Size = new System.Drawing.Size(38, 45);
             this.LB_counter.TabIndex = 3;
@@ -218,7 +231,7 @@ namespace C_Sharp_Mini_programs
             // BTN_reset
             // 
             this.BTN_reset.Font = new System.Drawing.Font("Segoe UI Historic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BTN_reset.Location = new System.Drawing.Point(334, 154);
+            this.BTN_reset.Location = new System.Drawing.Point(256, 149);
             this.BTN_reset.Name = "BTN_reset";
             this.BTN_reset.Size = new System.Drawing.Size(137, 59);
             this.BTN_reset.TabIndex = 2;
@@ -229,7 +242,7 @@ namespace C_Sharp_Mini_programs
             // BTN_mimus
             // 
             this.BTN_mimus.Font = new System.Drawing.Font("Segoe UI Historic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BTN_mimus.Location = new System.Drawing.Point(135, 256);
+            this.BTN_mimus.Location = new System.Drawing.Point(36, 252);
             this.BTN_mimus.Name = "BTN_mimus";
             this.BTN_mimus.Size = new System.Drawing.Size(137, 59);
             this.BTN_mimus.TabIndex = 1;
@@ -240,7 +253,7 @@ namespace C_Sharp_Mini_programs
             // BTN_plus
             // 
             this.BTN_plus.Font = new System.Drawing.Font("Segoe UI Historic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BTN_plus.Location = new System.Drawing.Point(135, 42);
+            this.BTN_plus.Location = new System.Drawing.Point(36, 39);
             this.BTN_plus.Name = "BTN_plus";
             this.BTN_plus.Size = new System.Drawing.Size(137, 59);
             this.BTN_plus.TabIndex = 0;
@@ -263,7 +276,7 @@ namespace C_Sharp_Mini_programs
             this.TB_Generator.Location = new System.Drawing.Point(4, 29);
             this.TB_Generator.Name = "TB_Generator";
             this.TB_Generator.Padding = new System.Windows.Forms.Padding(3);
-            this.TB_Generator.Size = new System.Drawing.Size(527, 388);
+            this.TB_Generator.Size = new System.Drawing.Size(435, 388);
             this.TB_Generator.TabIndex = 1;
             this.TB_Generator.Text = "Генератор";
             this.TB_Generator.UseVisualStyleBackColor = true;
@@ -271,7 +284,7 @@ namespace C_Sharp_Mini_programs
             // CB_Rand
             // 
             this.CB_Rand.AutoSize = true;
-            this.CB_Rand.Location = new System.Drawing.Point(332, 172);
+            this.CB_Rand.Location = new System.Drawing.Point(30, 191);
             this.CB_Rand.Name = "CB_Rand";
             this.CB_Rand.Size = new System.Drawing.Size(144, 24);
             this.CB_Rand.TabIndex = 9;
@@ -280,9 +293,9 @@ namespace C_Sharp_Mini_programs
             // 
             // BT_RandCopy
             // 
-            this.BT_RandCopy.Location = new System.Drawing.Point(39, 255);
+            this.BT_RandCopy.Location = new System.Drawing.Point(30, 281);
             this.BT_RandCopy.Name = "BT_RandCopy";
-            this.BT_RandCopy.Size = new System.Drawing.Size(119, 36);
+            this.BT_RandCopy.Size = new System.Drawing.Size(144, 36);
             this.BT_RandCopy.TabIndex = 8;
             this.BT_RandCopy.Text = "Копировать";
             this.BT_RandCopy.UseVisualStyleBackColor = true;
@@ -290,9 +303,9 @@ namespace C_Sharp_Mini_programs
             // 
             // BT_Rand_clear
             // 
-            this.BT_Rand_clear.Location = new System.Drawing.Point(39, 213);
+            this.BT_Rand_clear.Location = new System.Drawing.Point(30, 239);
             this.BT_Rand_clear.Name = "BT_Rand_clear";
-            this.BT_Rand_clear.Size = new System.Drawing.Size(119, 36);
+            this.BT_Rand_clear.Size = new System.Drawing.Size(144, 36);
             this.BT_Rand_clear.TabIndex = 7;
             this.BT_Rand_clear.Text = "Очистить";
             this.BT_Rand_clear.UseVisualStyleBackColor = true;
@@ -300,7 +313,7 @@ namespace C_Sharp_Mini_programs
             // 
             // TB_Random
             // 
-            this.TB_Random.Location = new System.Drawing.Point(308, 213);
+            this.TB_Random.Location = new System.Drawing.Point(215, 239);
             this.TB_Random.Multiline = true;
             this.TB_Random.Name = "TB_Random";
             this.TB_Random.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -310,7 +323,7 @@ namespace C_Sharp_Mini_programs
             // NUD_down
             // 
             this.NUD_down.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NUD_down.Location = new System.Drawing.Point(70, 67);
+            this.NUD_down.Location = new System.Drawing.Point(51, 33);
             this.NUD_down.Minimum = new decimal(new int[] {
             100,
             0,
@@ -323,7 +336,7 @@ namespace C_Sharp_Mini_programs
             // NUD_up
             // 
             this.NUD_up.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NUD_up.Location = new System.Drawing.Point(70, 129);
+            this.NUD_up.Location = new System.Drawing.Point(51, 106);
             this.NUD_up.Minimum = new decimal(new int[] {
             100,
             0,
@@ -337,7 +350,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.LB_genWrite.AutoSize = true;
             this.LB_genWrite.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LB_genWrite.Location = new System.Drawing.Point(218, 99);
+            this.LB_genWrite.Location = new System.Drawing.Point(278, 40);
             this.LB_genWrite.Name = "LB_genWrite";
             this.LB_genWrite.Size = new System.Drawing.Size(69, 27);
             this.LB_genWrite.TabIndex = 3;
@@ -347,7 +360,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(14, 131);
+            this.label2.Location = new System.Drawing.Point(5, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 27);
             this.label2.TabIndex = 2;
@@ -357,7 +370,7 @@ namespace C_Sharp_Mini_programs
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 69);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 27);
             this.label1.TabIndex = 1;
@@ -366,38 +379,134 @@ namespace C_Sharp_Mini_programs
             // BTN_Generate
             // 
             this.BTN_Generate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BTN_Generate.Location = new System.Drawing.Point(308, 90);
+            this.BTN_Generate.Location = new System.Drawing.Point(215, 99);
             this.BTN_Generate.Name = "BTN_Generate";
-            this.BTN_Generate.Size = new System.Drawing.Size(186, 45);
+            this.BTN_Generate.Size = new System.Drawing.Size(199, 45);
             this.BTN_Generate.TabIndex = 0;
             this.BTN_Generate.Text = "Сгенерировать";
             this.BTN_Generate.UseVisualStyleBackColor = true;
             this.BTN_Generate.Click += new System.EventHandler(this.BTN_Generate_Click);
             // 
-            // tabPage1
+            // TB_Notepad
             // 
-            this.tabPage1.Controls.Add(this.RTB_Notepad);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(527, 388);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Блокнот";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.TB_Notepad.Controls.Add(this.RTB_Notepad);
+            this.TB_Notepad.Location = new System.Drawing.Point(4, 29);
+            this.TB_Notepad.Name = "TB_Notepad";
+            this.TB_Notepad.Size = new System.Drawing.Size(435, 388);
+            this.TB_Notepad.TabIndex = 2;
+            this.TB_Notepad.Text = "Блокнот";
+            this.TB_Notepad.UseVisualStyleBackColor = true;
             // 
             // RTB_Notepad
             // 
             this.RTB_Notepad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RTB_Notepad.Location = new System.Drawing.Point(0, 0);
             this.RTB_Notepad.Name = "RTB_Notepad";
-            this.RTB_Notepad.Size = new System.Drawing.Size(527, 388);
+            this.RTB_Notepad.Size = new System.Drawing.Size(435, 388);
             this.RTB_Notepad.TabIndex = 0;
             this.RTB_Notepad.Text = "";
+            // 
+            // TB_Pasword
+            // 
+            this.TB_Pasword.Controls.Add(this.Copy_password);
+            this.TB_Pasword.Controls.Add(this.TD_Password);
+            this.TB_Pasword.Controls.Add(this.BTN_Password);
+            this.TB_Pasword.Controls.Add(this.label3);
+            this.TB_Pasword.Controls.Add(this.NUD_Password);
+            this.TB_Pasword.Controls.Add(this.CLB_Password);
+            this.TB_Pasword.Location = new System.Drawing.Point(4, 29);
+            this.TB_Pasword.Name = "TB_Pasword";
+            this.TB_Pasword.Size = new System.Drawing.Size(435, 388);
+            this.TB_Pasword.TabIndex = 3;
+            this.TB_Pasword.Text = "Пароли";
+            this.TB_Pasword.UseVisualStyleBackColor = true;
+            // 
+            // TD_Password
+            // 
+            this.TD_Password.Location = new System.Drawing.Point(53, 260);
+            this.TD_Password.Multiline = true;
+            this.TD_Password.Name = "TD_Password";
+            this.TD_Password.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TD_Password.Size = new System.Drawing.Size(320, 62);
+            this.TD_Password.TabIndex = 5;
+            this.TD_Password.TextChanged += new System.EventHandler(this.TD_Password_TextChanged);
+            // 
+            // BTN_Password
+            // 
+            this.BTN_Password.Location = new System.Drawing.Point(53, 202);
+            this.BTN_Password.Name = "BTN_Password";
+            this.BTN_Password.Size = new System.Drawing.Size(320, 43);
+            this.BTN_Password.TabIndex = 4;
+            this.BTN_Password.Text = "Сгенерировать пароль";
+            this.BTN_Password.UseVisualStyleBackColor = true;
+            this.BTN_Password.Click += new System.EventHandler(this.BTN_Password_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Длина пароля";
+            // 
+            // NUD_Password
+            // 
+            this.NUD_Password.Location = new System.Drawing.Point(229, 159);
+            this.NUD_Password.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.NUD_Password.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.NUD_Password.Name = "NUD_Password";
+            this.NUD_Password.Size = new System.Drawing.Size(144, 27);
+            this.NUD_Password.TabIndex = 2;
+            this.NUD_Password.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // CLB_Password
+            // 
+            this.CLB_Password.CheckOnClick = true;
+            this.CLB_Password.FormattingEnabled = true;
+            this.CLB_Password.Items.AddRange(new object[] {
+            "Цифры",
+            "Прописные буквы",
+            "Строчные буквы",
+            "Спец. символы: #, %, @, ~, &"});
+            this.CLB_Password.Location = new System.Drawing.Point(53, 26);
+            this.CLB_Password.Name = "CLB_Password";
+            this.CLB_Password.Size = new System.Drawing.Size(320, 92);
+            this.CLB_Password.TabIndex = 1;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // Copy_password
+            // 
+            this.Copy_password.Location = new System.Drawing.Point(53, 337);
+            this.Copy_password.Name = "Copy_password";
+            this.Copy_password.Size = new System.Drawing.Size(320, 43);
+            this.Copy_password.TabIndex = 6;
+            this.Copy_password.Text = "Копировать";
+            this.Copy_password.UseVisualStyleBackColor = true;
+            this.Copy_password.Click += new System.EventHandler(this.Copy_password_Click);
             // 
             // My_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 449);
+            this.ClientSize = new System.Drawing.Size(443, 449);
             this.Controls.Add(this.Notepad);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -414,7 +523,10 @@ namespace C_Sharp_Mini_programs
             this.TB_Generator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).EndInit();
-            this.tabPage1.ResumeLayout(false);
+            this.TB_Notepad.ResumeLayout(false);
+            this.TB_Pasword.ResumeLayout(false);
+            this.TB_Pasword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Password)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +558,7 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.Button BT_Rand_clear;
         private System.Windows.Forms.Button BT_RandCopy;
         private System.Windows.Forms.CheckBox CB_Rand;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage TB_Notepad;
         private System.Windows.Forms.RichTextBox RTB_Notepad;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Notepad;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Time;
@@ -454,6 +566,14 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem1;
+        private System.Windows.Forms.TabPage TB_Pasword;
+        private System.Windows.Forms.CheckedListBox CLB_Password;
+        private System.Windows.Forms.Button BTN_Password;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown NUD_Password;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.TextBox TD_Password;
+        private System.Windows.Forms.Button Copy_password;
     }
 }
 

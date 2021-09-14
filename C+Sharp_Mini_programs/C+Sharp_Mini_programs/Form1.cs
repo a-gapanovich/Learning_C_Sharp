@@ -14,6 +14,8 @@ namespace C_Sharp_Mini_programs
     {
         int count = 0;
         Random rnd;
+        char [] spec_chars = new char[] {'#', '%', '@', '~', '&' };
+        string password = "";
 
         public My_Form()
         {
@@ -119,6 +121,45 @@ namespace C_Sharp_Mini_programs
         private void My_Form_Load(object sender, EventArgs e)
         {
             LoadNotepad();
+        }
+
+        private void BTN_Password_Click(object sender, EventArgs e)
+        {
+            if (CLB_Password.CheckedItems.Count == 0) return;
+            
+            for (int i = 0; i < NUD_Password.Value; i++)
+            {
+                int n = rnd.Next(0, CLB_Password.CheckedItems.Count);
+                string s = Convert.ToString(CLB_Password.CheckedItems[n]);
+                switch(s)
+                {
+                    case "Цифры": password += Convert.ToString(rnd.Next(10));
+                        break;
+
+                    case "Прописные буквы":
+                        password += Convert.ToChar(rnd.Next(65, 88));
+                        break;
+                    case "Строчные буквы":
+                        password += Convert.ToChar(rnd.Next(97, 122));
+                        break;
+                    default:
+                        password += spec_chars[rnd.Next(spec_chars.Length)];
+                        break;
+                }
+                TD_Password.Text = password;
+                
+            }
+            
+        }
+
+        private void TD_Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Copy_password_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(password);
         }
     }
 }
