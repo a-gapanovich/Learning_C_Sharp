@@ -13,9 +13,12 @@ namespace C_Sharp_Mini_programs
     public partial class My_Form : Form
     {
         int count = 0;
+        Random rnd;
+
         public My_Form()
         {
             InitializeComponent();
+            rnd = new Random();
         }
 
         private void TSMI_Click(object sender, EventArgs e)
@@ -44,6 +47,12 @@ namespace C_Sharp_Mini_programs
         {
             count = 0;
             LB_counter.Text = Convert.ToString(count);
+        }
+
+        private void BTN_Generate_Click(object sender, EventArgs e)
+        {
+            int n = rnd.Next(Convert.ToInt32(NUD_down.Value), Convert.ToInt32(NUD_up.Value))+1;
+            LB_genWrite.Text = Convert.ToString(n);
         }
     }
 }

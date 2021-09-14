@@ -43,11 +43,20 @@ namespace C_Sharp_Mini_programs
             this.BTN_reset = new System.Windows.Forms.Button();
             this.BTN_mimus = new System.Windows.Forms.Button();
             this.BTN_plus = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TB_Generator = new System.Windows.Forms.TabPage();
+            this.NUD_down = new System.Windows.Forms.NumericUpDown();
+            this.NUD_up = new System.Windows.Forms.NumericUpDown();
+            this.LB_genWrite = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BTN_Generate = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Counter.SuspendLayout();
             this.TP_Counter.SuspendLayout();
+            this.TB_Generator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -109,7 +118,7 @@ namespace C_Sharp_Mini_programs
             // Counter
             // 
             this.Counter.Controls.Add(this.TP_Counter);
-            this.Counter.Controls.Add(this.tabPage2);
+            this.Counter.Controls.Add(this.TB_Generator);
             this.Counter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Counter.Location = new System.Drawing.Point(0, 28);
             this.Counter.Name = "Counter";
@@ -137,7 +146,7 @@ namespace C_Sharp_Mini_programs
             this.LB_counter.Font = new System.Drawing.Font("Segoe UI Historic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LB_counter.Location = new System.Drawing.Point(184, 159);
             this.LB_counter.Name = "LB_counter";
-            this.LB_counter.Size = new System.Drawing.Size(38, 46);
+            this.LB_counter.Size = new System.Drawing.Size(38, 45);
             this.LB_counter.TabIndex = 3;
             this.LB_counter.Text = "0";
             // 
@@ -174,15 +183,88 @@ namespace C_Sharp_Mini_programs
             this.BTN_plus.UseVisualStyleBackColor = true;
             this.BTN_plus.Click += new System.EventHandler(this.BTN_plus_Click);
             // 
-            // tabPage2
+            // TB_Generator
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(527, 389);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.TB_Generator.Controls.Add(this.NUD_down);
+            this.TB_Generator.Controls.Add(this.NUD_up);
+            this.TB_Generator.Controls.Add(this.LB_genWrite);
+            this.TB_Generator.Controls.Add(this.label2);
+            this.TB_Generator.Controls.Add(this.label1);
+            this.TB_Generator.Controls.Add(this.BTN_Generate);
+            this.TB_Generator.Location = new System.Drawing.Point(4, 29);
+            this.TB_Generator.Name = "TB_Generator";
+            this.TB_Generator.Padding = new System.Windows.Forms.Padding(3);
+            this.TB_Generator.Size = new System.Drawing.Size(527, 389);
+            this.TB_Generator.TabIndex = 1;
+            this.TB_Generator.Text = "Генератор";
+            this.TB_Generator.UseVisualStyleBackColor = true;
+            // 
+            // NUD_down
+            // 
+            this.NUD_down.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NUD_down.Location = new System.Drawing.Point(64, 26);
+            this.NUD_down.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.NUD_down.Name = "NUD_down";
+            this.NUD_down.Size = new System.Drawing.Size(123, 34);
+            this.NUD_down.TabIndex = 5;
+            // 
+            // NUD_up
+            // 
+            this.NUD_up.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NUD_up.Location = new System.Drawing.Point(64, 88);
+            this.NUD_up.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.NUD_up.Name = "NUD_up";
+            this.NUD_up.Size = new System.Drawing.Size(123, 34);
+            this.NUD_up.TabIndex = 4;
+            // 
+            // LB_genWrite
+            // 
+            this.LB_genWrite.AutoSize = true;
+            this.LB_genWrite.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LB_genWrite.Location = new System.Drawing.Point(212, 58);
+            this.LB_genWrite.Name = "LB_genWrite";
+            this.LB_genWrite.Size = new System.Drawing.Size(69, 27);
+            this.LB_genWrite.TabIndex = 3;
+            this.LB_genWrite.Text = "Число";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(8, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 27);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "До";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(8, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "От";
+            // 
+            // BTN_Generate
+            // 
+            this.BTN_Generate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BTN_Generate.Location = new System.Drawing.Point(302, 49);
+            this.BTN_Generate.Name = "BTN_Generate";
+            this.BTN_Generate.Size = new System.Drawing.Size(186, 45);
+            this.BTN_Generate.TabIndex = 0;
+            this.BTN_Generate.Text = "Сгенерировать";
+            this.BTN_Generate.UseVisualStyleBackColor = true;
+            this.BTN_Generate.Click += new System.EventHandler(this.BTN_Generate_Click);
             // 
             // My_Form
             // 
@@ -200,6 +282,10 @@ namespace C_Sharp_Mini_programs
             this.Counter.ResumeLayout(false);
             this.TP_Counter.ResumeLayout(false);
             this.TP_Counter.PerformLayout();
+            this.TB_Generator.ResumeLayout(false);
+            this.TB_Generator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_down)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_up)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +306,13 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.Button BTN_reset;
         private System.Windows.Forms.Button BTN_mimus;
         private System.Windows.Forms.Button BTN_plus;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage TB_Generator;
+        private System.Windows.Forms.NumericUpDown NUD_down;
+        private System.Windows.Forms.NumericUpDown NUD_up;
+        private System.Windows.Forms.Label LB_genWrite;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BTN_Generate;
     }
 }
 
