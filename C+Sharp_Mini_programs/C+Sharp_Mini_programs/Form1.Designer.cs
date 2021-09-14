@@ -70,6 +70,8 @@ namespace C_Sharp_Mini_programs
             this.NUD_Password = new System.Windows.Forms.NumericUpDown();
             this.CLB_Password = new System.Windows.Forms.CheckedListBox();
             this.TB_Converter = new System.Windows.Forms.TabPage();
+            this.CB_Choise = new System.Windows.Forms.ComboBox();
+            this.BTN_Swap = new System.Windows.Forms.Button();
             this.CB_To = new System.Windows.Forms.ComboBox();
             this.CB_From = new System.Windows.Forms.ComboBox();
             this.TB_To = new System.Windows.Forms.TextBox();
@@ -506,6 +508,8 @@ namespace C_Sharp_Mini_programs
             // 
             // TB_Converter
             // 
+            this.TB_Converter.Controls.Add(this.CB_Choise);
+            this.TB_Converter.Controls.Add(this.BTN_Swap);
             this.TB_Converter.Controls.Add(this.CB_To);
             this.TB_Converter.Controls.Add(this.CB_From);
             this.TB_Converter.Controls.Add(this.TB_To);
@@ -519,6 +523,29 @@ namespace C_Sharp_Mini_programs
             this.TB_Converter.UseVisualStyleBackColor = true;
             this.TB_Converter.Click += new System.EventHandler(this.TB_Converter_Click);
             // 
+            // CB_Choise
+            // 
+            this.CB_Choise.FormattingEnabled = true;
+            this.CB_Choise.Items.AddRange(new object[] {
+            "Длина",
+            "Вес"});
+            this.CB_Choise.Location = new System.Drawing.Point(113, 17);
+            this.CB_Choise.Name = "CB_Choise";
+            this.CB_Choise.Size = new System.Drawing.Size(188, 28);
+            this.CB_Choise.TabIndex = 10;
+            this.CB_Choise.Text = "Длина";
+            this.CB_Choise.SelectedIndexChanged += new System.EventHandler(this.CB_Choise_SelectedIndexChanged);
+            // 
+            // BTN_Swap
+            // 
+            this.BTN_Swap.Location = new System.Drawing.Point(183, 60);
+            this.BTN_Swap.Name = "BTN_Swap";
+            this.BTN_Swap.Size = new System.Drawing.Size(67, 36);
+            this.BTN_Swap.TabIndex = 9;
+            this.BTN_Swap.Text = "<<>>";
+            this.BTN_Swap.UseVisualStyleBackColor = true;
+            this.BTN_Swap.Click += new System.EventHandler(this.BTN_Swap_Click);
+            // 
             // CB_To
             // 
             this.CB_To.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -530,7 +557,7 @@ namespace C_Sharp_Mini_programs
             "m",
             "km",
             "mile"});
-            this.CB_To.Location = new System.Drawing.Point(241, 60);
+            this.CB_To.Location = new System.Drawing.Point(276, 60);
             this.CB_To.Name = "CB_To";
             this.CB_To.Size = new System.Drawing.Size(151, 36);
             this.CB_To.TabIndex = 8;
@@ -547,7 +574,7 @@ namespace C_Sharp_Mini_programs
             "m",
             "km",
             "mile"});
-            this.CB_From.Location = new System.Drawing.Point(25, 60);
+            this.CB_From.Location = new System.Drawing.Point(8, 60);
             this.CB_From.Name = "CB_From";
             this.CB_From.Size = new System.Drawing.Size(151, 36);
             this.CB_From.TabIndex = 7;
@@ -556,7 +583,7 @@ namespace C_Sharp_Mini_programs
             // TB_To
             // 
             this.TB_To.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TB_To.Location = new System.Drawing.Point(241, 126);
+            this.TB_To.Location = new System.Drawing.Point(276, 126);
             this.TB_To.Name = "TB_To";
             this.TB_To.ReadOnly = true;
             this.TB_To.Size = new System.Drawing.Size(151, 34);
@@ -565,7 +592,7 @@ namespace C_Sharp_Mini_programs
             // TB_From
             // 
             this.TB_From.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TB_From.Location = new System.Drawing.Point(25, 126);
+            this.TB_From.Location = new System.Drawing.Point(8, 126);
             this.TB_From.Name = "TB_From";
             this.TB_From.Size = new System.Drawing.Size(151, 34);
             this.TB_From.TabIndex = 5;
@@ -667,6 +694,8 @@ namespace C_Sharp_Mini_programs
         private System.Windows.Forms.ComboBox CB_From;
         private System.Windows.Forms.TextBox TB_To;
         private System.Windows.Forms.TextBox TB_From;
+        private System.Windows.Forms.Button BTN_Swap;
+        private System.Windows.Forms.ComboBox CB_Choise;
     }
 }
 
