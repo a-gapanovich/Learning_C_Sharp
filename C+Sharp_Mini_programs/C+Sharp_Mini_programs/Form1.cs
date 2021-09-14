@@ -17,5 +17,14 @@ namespace C_Sharp_Mini_programs
             InitializeComponent();
         }
 
+        private void TSMI_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Тестовое приложение, в котором пытаюсь понять идею работы с Window Forms и C# \nАвтор: Александр Гапанович, сентябрь 2021 г.","О программе");
+        }
     }
 }
