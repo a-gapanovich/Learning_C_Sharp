@@ -1,0 +1,101 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Graphics/1.0.0": {
+        "dependencies": {
+          "LightningChart": "10.1.2.2"
+        },
+        "runtime": {
+          "Graphics.dll": {}
+        }
+      },
+      "LightningChart/10.1.2.2": {
+        "runtime": {
+          "lib/net45/Arction.DirectX.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.DirectXFiles.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.DirectXInit.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.Licensing.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          },
+          "lib/net45/Arction.MathCore.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.RenderingDefinitions.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.RenderingEngine.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.RenderingEngine11.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.RenderingEngine9.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.WinForms.Charting.LightningChart.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.WinForms.SignalProcessing.SignalTools.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.WinForms.TradingCharts.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.Wpf.Charting.LightningChart.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.Wpf.ChartingMVVM.LightningChart.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.Wpf.SignalProcessing.SignalTools.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          },
+          "lib/net45/Arction.Wpf.TradingCharts.dll": {
+            "assemblyVersion": "10.1.2.4002",
+            "fileVersion": "10.1.2.4002"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Graphics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LightningChart/10.1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8xt2yzrKg7bgya+bgtMwGvPmUh5yW4MkpXFVZNiumGTX7rMZ2HodcjNCpavzIQYQKKDiZbHUdRFUtfA8Q9/mJA==",
+      "path": "lightningchart/10.1.2.2",
+      "hashPath": "lightningchart.10.1.2.2.nupkg.sha512"
+    }
+  }
+}
